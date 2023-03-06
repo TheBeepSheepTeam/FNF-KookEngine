@@ -42,10 +42,10 @@ jobs:
           haxelib run lime setup
           haxelib install flixel-tools
           haxelib run flixel-tools setup
-          haxelib install flixel-addons
           haxelib install flixel-ui
           haxelib install hscript
           haxelib install newgrounds 1.1.5
+          haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit
           haxelib install hxCodec
           haxelib install hxcpp-debug-server
           haxelib git polymod https://github.com/larsiusprime/polymod.git
@@ -82,10 +82,10 @@ jobs:
           haxelib run lime setup
           haxelib install flixel-tools
           haxelib run flixel-tools setup
-          haxelib install flixel-addons
           haxelib install flixel-ui
           haxelib install hscript
           haxelib install newgrounds 1.1.5
+          haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit
           haxelib install hxCodec
           haxelib install hxcpp-debug-server
           haxelib git polymod https://github.com/larsiusprime/polymod.git
@@ -123,10 +123,10 @@ jobs:
           haxelib run lime setup
           haxelib install flixel-tools
           haxelib run flixel-tools setup
-          haxelib install flixel-addons
           haxelib install flixel-ui
           haxelib install hscript
           haxelib install newgrounds 1.1.5
+          haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit
           haxelib install hxCodec
           haxelib install hxcpp-debug-server
           haxelib git polymod https://github.com/larsiusprime/polymod.git
