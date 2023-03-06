@@ -16,11 +16,11 @@ import flixel.ui.FlxButton;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
-import ui.AtlasMenuList;
-import ui.MenuList;
-import ui.OptionsState;
-import ui.PreferencesMenu;
-import ui.Prompt;
+import AtlasMenuList;
+import MenuList;
+import OptionsState;
+import PreferencesMenu;
+import Prompt;
 
 using StringTools;
 
@@ -29,7 +29,7 @@ import Discord.DiscordClient;
 #end
 #if newgrounds
 import io.newgrounds.NG;
-import ui.NgPrompt;
+import NgPrompt;
 #end
 
 class MainMenuState extends MusicBeatState

@@ -1,7 +1,7 @@
-package ui;
+package;
 
 import NGio;
-import ui.Prompt;
+import Prompt;
 
 class NgPrompt extends Prompt
 {

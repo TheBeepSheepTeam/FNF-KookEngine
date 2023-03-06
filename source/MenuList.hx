@@ -1,4 +1,4 @@
-package ui;
+package;
 
 import flixel.math.FlxPoint;
 import flixel.FlxG;

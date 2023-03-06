@@ -1,7 +1,7 @@
-package ui;
+package;
 
-import ui.AtlasText;
-import ui.MenuList;
+import AtlasText;
+import MenuList;
 
 class TextMenuList extends MenuTypedList<TextMenuItem>
 {

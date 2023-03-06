@@ -264,7 +264,7 @@ class Main extends Sprite
 	}
 	#end
 
-	// Code was entirely made by sqirra-rng for their fnf engine named "Izzy Engine", big props to them!!!
+	// Code was entirely made by sqirra-rng for their FNF engine named "Izzy Engine", big props to them!!!
 	// very cool person for real they don't get enough credit for their work
 	#if ErrorDialog
 	function onCrash(e:UncaughtErrorEvent):Void
@@ -290,7 +290,7 @@ class Main extends Sprite
 			}
 		}
 
-		errMsg += "\nUncaught Error: " + e.error + "\nPlease report this error to the GitHub page: https://github.com/nennneko5787/FNF-nekoEngine2\n\n> Crash Handler written by: sqirra-rng";
+		errMsg += "\nUncaught Error: " + e.error + "\nPlease report this error to the GitHub page: https://github.com/TheBeepSheepTeam/FNF-KookEngine\n\n> Crash Handler written by: sqirra-rng";
 
 		if (!FileSystem.exists("./crash/"))
 			FileSystem.createDirectory("./crash/");

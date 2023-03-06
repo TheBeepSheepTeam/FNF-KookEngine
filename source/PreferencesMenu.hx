@@ -1,4 +1,4 @@
-package ui;
+package;
 
 import flixel.FlxCamera;
 import flixel.FlxG;
@@ -6,10 +6,11 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup;
 import flixel.util.FlxColor;
-import ui.AtlasText.AtlasFont;
-import ui.TextMenuList.TextMenuItem;
+import AtlasText.AtlasFont;
+import TextMenuList.TextMenuItem;
+import CheckboxThingie;
 
-class PreferencesMenu extends ui.OptionsState.Page
+class PreferencesMenu extends OptionsState.Page
 {
 	public static var preferences:Map<String, Dynamic> = new Map();
 
@@ -30,10 +31,10 @@ class PreferencesMenu extends ui.OptionsState.Page
 
 		add(items = new TextMenuList());
 
-		createPrefItem('naughtyness', 'censor-naughty', true);
-		createPrefItem('downscroll', 'downscroll', false);
-		createPrefItem('middlescroll', 'middlescroll', false);
-		createPrefItem('flashing menu', 'flashing-menu', true);
+		createPrefItem('Censoring', 'censor-naughty', true);
+		createPrefItem('Downscroll', 'downscroll', false);
+		createPrefItem('Middlescroll', 'middlescroll', false);
+		createPrefItem('Flashing Lights', 'flashing-menu', true);
 		createPrefItem('Camera Zooming on Beat', 'camera-zoom', true);
 		createPrefItem('FPS Counter', 'fps-counter', true);
 		createPrefItem('Auto Pause', 'auto-pause', false);
@@ -180,49 +181,5 @@ class PreferencesMenu extends ui.OptionsState.Page
 		{
 			trace('found preference: ' + preferences.get(prefString));
 		}
-	}
-}
-
-class CheckboxThingie extends FlxSprite
-{
-	public var daValue(default, set):Bool;
-
-	public function new(x:Float, y:Float, daValue:Bool = false)
-	{
-		super(x, y);
-
-		frames = Paths.getSparrowAtlas('checkboxThingie');
-		animation.addByPrefix('static', 'Check Box unselected', 24, false);
-		animation.addByPrefix('checked', 'Check Box selecting animation', 24, false);
-
-		antialiasing = true;
-
-		setGraphicSize(Std.int(width * 0.7));
-		updateHitbox();
-
-		this.daValue = daValue;
-	}
-
-	override function update(elapsed:Float)
-	{
-		super.update(elapsed);
-
-		switch (animation.curAnim.name)
-		{
-			case 'static':
-				offset.set();
-			case 'checked':
-				offset.set(17, 70);
-		}
-	}
-
-	function set_daValue(value:Bool):Bool
-	{
-		if (value)
-			animation.play('checked', true);
-		else
-			animation.play('static');
-
-		return value;
 	}
 }

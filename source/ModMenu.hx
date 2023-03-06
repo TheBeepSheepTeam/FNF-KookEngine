@@ -1,4 +1,4 @@
-package ui;
+package;
 
 import flixel.FlxG;
 import flixel.group.FlxGroup.FlxTypedGroup;
@@ -20,7 +20,7 @@ import polymod.Polymod.ModMetadata;
 
 using StringTools;
 
-class ModMenu extends ui.OptionsState.Page
+class ModMenu extends OptionsState.Page
 {
 	var modList:Array<ModMetadata> = [];
 	public static var grpMods:FlxTypedGroup<ModMenuItem>;
@@ -129,7 +129,7 @@ class ModMenu extends ui.OptionsState.Page
 
 		descriptionText.text =
 		descriptionText.text
-		+ "\nnekoEngine Version: " + modList[curSelected].apiVersion 
+		+ "\nKook Engine Version: " + modList[curSelected].apiVersion 
 		+ "\nMod Version: " + modList[curSelected].modVersion 
 		+ "\n";
 

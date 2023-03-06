@@ -46,7 +46,7 @@ import openfl.filters.ShaderFilter;
 import shaderslmfao.BuildingShaders.BuildingShader;
 import shaderslmfao.BuildingShaders;
 import shaderslmfao.ColorSwap;
-import ui.PreferencesMenu;
+import PreferencesMenu;
 import StrumNote;
 
 #if hxCodec

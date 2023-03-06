@@ -1,9 +1,13 @@
-package ui;
+package;
 
 import flixel.FlxSprite;
 import flixel.group.FlxSpriteGroup;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxStringUtil;
+import AtlasChar;
+import AtlasFont;
+import AtlasFontData;
+import Case;
 
 @:forward
 abstract DefaultText(AtlasText) from AtlasText to AtlasText
@@ -177,95 +181,4 @@ class AtlasText extends FlxTypedSpriteGroup<AtlasChar>
 			]
 		);
 	}
-}
-
-class AtlasChar extends FlxSprite
-{
-	public var char(default, set):String;
-	public function new(x = 0.0, y = 0.0, atlas:FlxAtlasFrames, char:String)
-	{
-		super(x, y);
-		frames = atlas;
-		this.char = char;
-		antialiasing = true;
-	}
-	
-	function set_char(value:String)
-	{
-		if (this.char != value)
-		{
-			var prefix = getAnimPrefix(value);
-			animation.addByPrefix("anim", prefix, 24);
-			animation.play("anim");
-			updateHitbox();
-		}
-		
-		return this.char = value;
-	}
-	
-	function getAnimPrefix(char:String)
-	{
-		return switch (char)
-		{
-			case '-': '-dash-';
-			case '.': '-period-';
-			case ",": '-comma-';
-			case "'": '-apostraphie-';
-			case "?": '-question mark-';
-			case "!": '-exclamation point-';
-			case "\\": '-back slash-';
-			case "/": '-forward slash-';
-			case "*": '-multiply x-';
-			case "“": '-start quote-';
-			case "”": '-end quote-';
-			default: char;
-		}
-	}
-}
-
-private class AtlasFontData
-{
-	static public var upperChar = ~/^[A-Z]\d+$/;
-	static public var lowerChar = ~/^[a-z]\d+$/;
-	
-	public var atlas:FlxAtlasFrames;
-	public var maxHeight:Float = 0.0;
-	public var caseAllowed:Case = Both;
-	
-	public function new (name:AtlasFont)
-	{
-		atlas = Paths.getSparrowAtlas("fonts/" + name.getName().toLowerCase());
-		atlas.parent.destroyOnNoUse = false;
-		atlas.parent.persist = true;
-		
-		var containsUpper = false;
-		var containsLower = false;
-		
-		for (frame in atlas.frames)
-		{
-			maxHeight = Math.max(maxHeight, frame.frame.height);
-			
-			if (!containsUpper)
-				containsUpper = upperChar.match(frame.name);
-			
-			if (!containsLower)
-				containsLower = lowerChar.match(frame.name);
-		}
-		
-		if (containsUpper != containsLower)
-			caseAllowed = containsUpper ? Upper : Lower;
-	}
-}
-
-enum Case
-{
-	Both;
-	Upper;
-	Lower;
-}
-
-enum AtlasFont
-{
-	Default;
-	Bold;
 }

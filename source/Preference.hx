@@ -1,5 +1,5 @@
 package;
-import ui.PreferencesMenu;
+import PreferencesMenu;
 
 class Preference {
 	public static var censor_naughty = PreferencesMenu.getPref('censor-naughty');

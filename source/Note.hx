@@ -7,7 +7,7 @@ import flixel.math.FlxMath;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import shaderslmfao.ColorSwap;
-import ui.PreferencesMenu;
+import PreferencesMenu;
 
 using StringTools;
 

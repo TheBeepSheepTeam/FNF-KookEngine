@@ -32,7 +32,7 @@ import openfl.net.NetStream;
 import shaderslmfao.BuildingShaders.BuildingShader;
 import shaderslmfao.BuildingShaders;
 import shaderslmfao.ColorSwap;
-import ui.PreferencesMenu;
+import PreferencesMenu;
 
 using StringTools;
 
