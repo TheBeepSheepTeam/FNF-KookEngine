@@ -129,12 +129,12 @@ class MainMenuState extends MusicBeatState
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
-		versionShit.text += '(Newgrounds exclusive preview)';
+		versionShit.text += '(Bruh)';
 
-		var versionShitnekoEngine:FlxText = new FlxText(5, FlxG.height - 36, 0, "FNF-nekoEngine2 v" + Application.current.meta.get('version'), 12);
-		versionShitnekoEngine.scrollFactor.set();
-		versionShitnekoEngine.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShitnekoEngine);
+		var versionShitKookEngine:FlxText = new FlxText(5, FlxG.height - 36, 0, "Kook Engine v" + Application.current.meta.get('version'), 12);
+		versionShitKookEngine.scrollFactor.set();
+		versionShitKookEngine.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(versionShitKookEngine);
 
 		// NG.core.calls.event.logEvent('swag').send();
 
