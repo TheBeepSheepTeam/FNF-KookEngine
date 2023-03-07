@@ -5,9 +5,9 @@ import flixel.group.FlxSpriteGroup;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxStringUtil;
 import AtlasChar;
-import AtlasFont;
+import AtlasFontData.AtlasFont;
 import AtlasFontData;
-import Case;
+import AtlasFontData.Case;
 
 @:forward
 abstract DefaultText(AtlasText) from AtlasText to AtlasText
